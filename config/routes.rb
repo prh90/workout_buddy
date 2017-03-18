@@ -3,6 +3,7 @@ Rails.application.routes.draw do
   resources :home, only: :index
   resources :users
   resources :posts
-  
+  resources :sessions
+
   root 'home#index'
 end
