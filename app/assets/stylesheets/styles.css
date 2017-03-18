@@ -1,0 +1,9 @@
+.body {
+  background-color: darkred;
+}
+.title_web {
+  font-family: "Comic Sans MS", "Comic Sans", cursive;
+  font-size: 75px;
+  text-align: center;
+  color: black;
+}
