@@ -1,0 +1,20 @@
+<h1>User Registration</h1><br>
+<% form_for @user do |f| %>
+
+  <%= f.label :first_name %>
+  <%= f.text_field :first_name, placeholder: 'First Name', class: "form-control" %>
+
+  <%= f.label :last_name %>
+  <%= f.text_field :last_name, placeholder: 'Last Name', class: "form-control" %>
+
+  <%= f.label :email %>
+  <%= f.text_field :email, placeholder: 'Email', class: "form-control" %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, placeholder: 'Password', class: "form-control" %>
+
+  <%= f.label :password_confirmation %>
+  <%= f.password_field :password_confirmation, placeholder: 'Confirm Password', class: "form-control"%>
+
+  <%= f.submit class: "btn btn-success" %>
+<% end %>
