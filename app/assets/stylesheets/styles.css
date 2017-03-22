@@ -1,9 +1,16 @@
 .body {
-  background-color: darkred;
+  background-color: #551111;
 }
 .title_web {
   font-family: "Comic Sans MS", "Comic Sans", cursive;
   font-size: 75px;
   text-align: center;
   color: black;
+}
+form {
+margin: 0 auto;
+width:250px;
+}
+.label {
+  color: yellow;
 }
