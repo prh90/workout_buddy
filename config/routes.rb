@@ -5,11 +5,10 @@ Rails.application.routes.draw do
   resources :posts
   resources :sessions
 
+  get '/login', to: 'sessions#new'
+  post '/login', to: 'sessions#create'
+  delete '/logout', to: 'sessions#destroy'
+
   root 'home#index'
-
-  get '/login' => 'sessions#new'
-  post '/login' => 'sessions#create'
-  get '/logout' => 'sessions#destroy'
-
 
 end
