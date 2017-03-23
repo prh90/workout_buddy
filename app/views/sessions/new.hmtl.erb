@@ -1,9 +1,11 @@
-<h1 class="title_web">Login</h1><br>
+<h1>Login</h1><br>
+<%= form_for(:sessions,  url: sessions_path) do |f| %>
 
-<%= form_tag login_path do %>
-  <%= label_tag 'username' %>
-  <%= text_field_tag 'username' %>
-  <%= label_tag 'password' %>
-  <%= password_field_tag 'password' %>
-  <%= submit_tag 'log in' %>
+  <%= f.label :email %>
+  <%= f.text_field :email, placeholder: 'email', class: "form-control" %>
+
+  <%= f.label :password %>
+  <%= f.password_field :password, placeholder: 'Password', class: "form-control" %>
+
+  <%= f.submit class: "btn btn-success"%>
 <% end %>
