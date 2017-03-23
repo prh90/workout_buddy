@@ -1,11 +1,7 @@
-<h1>Login</h1><br>
-<%= form_for(:sessions,  url: sessions_path) do |f| %>
-
-  <%= f.label :email %>
-  <%= f.text_field :email, placeholder: 'email', class: "form-control" %>
-
-  <%= f.label :password %>
-  <%= f.password_field :password, placeholder: 'Password', class: "form-control" %>
-
-  <%= f.submit class: "btn btn-success"%>
+<%= form_tag login_path do %>
+ <%= label_tag 'email' %>
+ <%= text_field_tag 'email' %>
+ <%= label_tag 'password' %>
+ <%= password_field_tag 'password' %>
+ <%= submit_tag 'log in' %>
 <% end %>
