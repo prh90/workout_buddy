@@ -1,28 +1,21 @@
 class SessionsController < ApplicationController
   def new
-
+    
   end
 
   def create
-    user = User.find_by(username: params[:username])
-
-    if user && user.authenticate(params[:password])
-      log_in(user)
-      flash[:notice] = "Hello #{user.username}!"
+    @user = User.find_by(email: params[:email])
+    if @user && @user.authenticate(params[:password])
+      login
       redirect_to root_path
     else
-      flash[:error] = "Username or password was incorrect"
+      @errors = ["You may have mistyped your email.", "You may have mistyped your password"]
       render :new
     end
   end
 
   def destroy
-    if user = User.find_by_id(session[:user_id])
-      log_out
-      redirect_to root_path
-    else
-      flash[:error] = "Failed to log out"
-      redirect_to root_path
-    end
+    session.clear
+    redirect_to root_path
   end
 end
