@@ -4,13 +4,12 @@ class SessionsController < ApplicationController
   end
 
   def create
-    @user = User.find_by(email: params[:email])
+    @user = User.find_by_email(params[:email])
     if @user && @user.authenticate(params[:password])
-      login(@user)
+      log_in(@user)
       redirect_to root_path
     else
-      @errors = ["You may have mistyped your email.", "You may have mistyped your password"]
-      render :new
+      redirect_to '/register'
     end
   end
 
