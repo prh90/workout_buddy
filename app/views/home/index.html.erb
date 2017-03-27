@@ -1,1 +1,5 @@
-<h1 class="title_web">Welcome to Workout Buddy</h1>
+<% if current_user %>
+  <h1 class="title_web">Welcome back <%= current_user.first_name %> <%= current_user.last_name %></h1>
+<% else %>
+  <h1 class="title_web">Welcome to Workout Buddy</h1>
+<% end %>
