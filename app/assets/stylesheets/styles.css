@@ -6,6 +6,7 @@
   font-size: 75px;
   text-align: center;
   color: black;
+  text-decoration: underline;
 }
 form {
 margin: 0 auto;
@@ -39,4 +40,14 @@ width:250px;
 .topnav a.active {
     background-color: #4CAF50;
     color: white;
+}
+.welcome {
+  text-align: left;
+  font-size: 40px;
+  margin-left: 100px;
+  margin-right: 100px;
+  margin-top: 80px;
+  color: #f5c067;
+  font-style: oblique;
+  font-family: cursive;
 }
