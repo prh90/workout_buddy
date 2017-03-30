@@ -4,13 +4,13 @@
   <%= f.text_field :title, placeholder: 'Title', class: "form-control" %>
 
   <%= f.label :date, class: "form-group" %>
-  <%= f.text_field :date, placeholder: 'Date', class: "form-control" %>
+  <%= f.date_field :date, placeholder: 'Date', class: "form-control" %>
 
   <%= f.label :calories, class: "form-group" %>
-  <%= f.text_field :calories, placeholder: 'Calories', class: "form-control" %>
+  <%= f.number_field :calories, placeholder: 'Calories', class: "form-control" %>
 
   <%= f.label :description, class: "form-group" %>
-  <%= f.text_field :description, placeholder: 'Description', class: "form-control" %>
+  <%= f.text_field :description, placeholder: 'Description', class: "form-control", rows="3" %>
 
   <%= f.submit class: "btn btn-success" %>
 <% end %>

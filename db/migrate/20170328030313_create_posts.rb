@@ -5,6 +5,8 @@ class CreatePosts < ActiveRecord::Migration[5.0]
       t.string :date
       t.integer :calories
       t.string :description
+
+      t.timestamps
     end
   end
 end
