@@ -17,6 +17,7 @@ ActiveRecord::Schema.define(version: 20170328030313) do
     t.string   "date"
     t.integer  "calories"
     t.string   "description"
+    t.integer  "creator_id"
     t.datetime "created_at",  null: false
     t.datetime "updated_at",  null: false
   end

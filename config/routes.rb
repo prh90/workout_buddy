@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
   get '/register', to: 'users#new'
 
-  match '/users/:user_id/posts/new', :to => 'posts#create', :via => [:post]
+  # match '/users/:user_id/posts/new', :to => 'posts#create', :via => [:post]
 
   root 'home#index'
 end

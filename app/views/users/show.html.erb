@@ -1,3 +1,5 @@
 <h1 class="title_web">Welcome back <%= current_user.first_name %> <%= current_user.last_name %></h1>
 
 <a><%= link_to "Log Workout", "/users/#{current_user.id}/posts/new", class: "btn btn-primary" %></a>
+
+<% if @posts%>
