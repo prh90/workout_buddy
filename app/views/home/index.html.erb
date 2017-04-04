@@ -1,0 +1,9 @@
+<% if current_user %>
+  <h1 class="title_web">Hello, <%= current_user.first_name %> <%= current_user.last_name %>!</h1>
+<% else %>
+  <h1 class="title_web">Welcome to Workout Buddy</h1>
+<% end %>
+
+<p class="welcome">
+  Workout Buddy is a place to log in your workouts, in a simple and friendly way. Log in with the the ability to have your own personal journal on the web. Log your thoughts, and the period of time you worked out. Also have the ability to listen to music while you enter your information. 
+</p>

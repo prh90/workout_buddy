@@ -1,0 +1,16 @@
+<%= form_for @post do |f| %>
+
+  <%= f.label :title, class: "form-group" %>
+  <%= f.text_field :title, placeholder: 'Title', class: "form-control" %>
+
+  <%= f.label :date, class: "form-group" %>
+  <%= f.date_field :date, placeholder: 'Date', class: "form-control" %>
+
+  <%= f.label :calories, class: "form-group" %>
+  <%= f.number_field :calories, placeholder: 'Calories', class: "form-control" %>
+
+  <%= f.label :description, class: "form-group" %>
+  <%= f.text_area :description, :cols => 30, :rows => 10, placeholder: 'Description', class: "form-control" %><br>
+
+  <%= f.submit "Log Workout", class: "btn btn-success" %>
+<% end %>
