@@ -1,4 +1,4 @@
-<%= form_for "/users/#{current_user.id}/posts" do |f| %>
+<%= form_for user_posts_path(current_user, @post.id) do |f| %>
 
   <%= f.label :title, class: "form-group" %>
   <%= f.text_field :title, placeholder: 'Title', class: "form-control" %>
@@ -10,7 +10,7 @@
   <%= f.number_field :calories, placeholder: 'Calories', class: "form-control" %>
 
   <%= f.label :description, class: "form-group" %>
-  <%= f.text_field :description, :cols => 30, :rows => 10, placeholder: 'Description', class: "form-control" %><br>
+  <%= f.text_area :description, :cols => 30, :rows => 10, placeholder: 'Description', class: "form-control" %><br>
 
   <%= f.submit "Log Workout", class: "btn btn-success" %>
 <% end %>
